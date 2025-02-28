@@ -1,0 +1,18 @@
+# EXAMPLE USAGE:
+#
+#   Refer for explanation to following link:
+#   https://lefthook.dev/configuration/
+
+pre-push:
+  jobs:
+    - name: type checking
+      run: bunx tsc --noEmit
+    - name: running tests
+      run: bun test
+
+pre-commit:
+  parallel: true
+  jobs:
+    - name: link & format
+      run: bunx biome check --write --staged
+      glob: '*.{ts,tsx,mts}'
