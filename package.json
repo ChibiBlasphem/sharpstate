@@ -1,0 +1,68 @@
+{
+  "name": "sharpstate",
+  "version": "0.0.13",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "state",
+    "react state",
+    "signal",
+    "signals",
+    "component state",
+    "ui state"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build && tsc -p tsconfig.build.json --emitDeclarationOnly",
+    "test": "tsc --noEmit && bun test",
+    "preview": "vite preview"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/sharpstate.cjs.js",
+  "module": "./dist/sharpstate.es.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/sharpstate.es.js",
+      "require": "./dist/sharpstate.cjs.js"
+    }
+  },
+  "authors": [
+    "@chibikookie"
+  ],
+  "homepage": "https://github.com/ChibiBlasphem/sharpstate#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChibiBlasphem/sharpstate"
+  },
+  "bugs": "https://github.com/ChibiBlasphem/sharpstate/issues",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@happy-dom/global-registrator": "^17.1.8",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@types/bun": "^1.2.4",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "lefthook": "^1.11.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0",
+    "vite-plugin-externalize-deps": "^0.9.0",
+    "vitest": "^3.0.7"
+  },
+  "peerDependencies": {
+    "react": ">=18||19",
+    "react-dom": ">=18||19"
+  },
+  "dependencies": {
+    "@preact/signals-react": "^3.0.1",
+    "deepsignal": "^1.6.0"
+  }
+}
